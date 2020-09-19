@@ -1,0 +1,13 @@
+{
+    "name": "Opsive.UltimateCharacterController.AddOns.Agility.Editor",
+    "references": [
+        "Opsive.UltimateCharacterController",
+        "Opsive.UltimateCharacterController.Editor",
+        "Opsive.UltimateCharacterController.AddOns.Agility",
+        "Opsive.UltimateCharacterController.AddOns.Shared.Editor"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": []
+}
