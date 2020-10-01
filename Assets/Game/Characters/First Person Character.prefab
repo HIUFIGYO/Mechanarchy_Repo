@@ -185,6 +185,7 @@ GameObject:
   - component: {fileID: 246013877445208211}
   - component: {fileID: 3114820220607706603}
   - component: {fileID: 4034963581485488702}
+  - component: {fileID: 7999140809822468659}
   m_Layer: 31
   m_Name: First Person Character
   m_TagString: Player
@@ -650,7 +651,6 @@ MonoBehaviour:
   health: 100
   tempHealth: 50
   bleedoutHealth: 300
-  weapon: {fileID: 0}
   isPlayer: 1
   tempHealthTime: 3
   bleedoutHealthTime: 1
@@ -669,6 +669,22 @@ MonoBehaviour:
   stamina: 100
   staminaRecoverRate: 20
   recoverDelay: 1
+--- !u!114 &7999140809822468659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8532630570857158426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb818a52ec3d15649b3106822028b282, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  armor: 50
+  shield: 25
+  flatDamageReduction: 5
+  damageDistributionRatio: 0.75
 --- !u!1 &8532630571333506380
 GameObject:
   m_ObjectHideFlags: 0

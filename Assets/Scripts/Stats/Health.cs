@@ -8,7 +8,6 @@ namespace Mechanarchy.Stats
         [SerializeField] float health = 100f;
         [SerializeField] float tempHealth = 0f;
         [SerializeField] float bleedoutHealth = 300f;
-        [SerializeField] Weapon weapon;
 
         [Header("Control")]
         [SerializeField] bool isPlayer = true;
@@ -17,8 +16,17 @@ namespace Mechanarchy.Stats
 
         bool isDead = false;
 
+        float maxHealth;
+        float maxTempHealth;
+
         float timerTempHealth = 0f;
         float timerBleedout = 0f;
+
+        private void Start()
+        {
+            maxHealth = health;
+            maxTempHealth = tempHealth;
+        }
 
         private void Update()
         {
@@ -135,6 +143,25 @@ namespace Mechanarchy.Stats
                 remainingDamage = DamageHealth(remainingDamage);
                 DamageBleedout(remainingDamage);
 
+            }
+        }
+
+        public void RecoverHealth(float healthRecover)
+        {
+            health += healthRecover;
+            if (health > maxHealth)
+            {
+                health = maxHealth;
+            }
+
+        }
+
+        public void RecoverTempHealth(float healthRecover)
+        {
+            tempHealth += healthRecover;
+            if(tempHealth > maxTempHealth)
+            {
+                tempHealth = maxTempHealth;
             }
         }
     }
