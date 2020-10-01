@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26f9aaaad3c14ca40ab7b9cf8595aef2, type: 3}
+  m_Name: Gunner
+  m_EditorClassIdentifier: 
+  primaryWeapon: {fileID: 11400000, guid: 93a8a51a618390c42a4d1425b325a33f, type: 2}
+  secondaryWeapon: {fileID: 0}
+  grenade: {fileID: 0}
+  classSkill: {fileID: 11400000, guid: 90de78aab0ab4ac48acef8a9728b1249, type: 2}
+  passiveSkill: {fileID: 0}
