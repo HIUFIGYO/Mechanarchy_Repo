@@ -187,7 +187,7 @@ GameObject:
   - component: {fileID: 4034963581485488702}
   - component: {fileID: 7999140809822468659}
   m_Layer: 31
-  m_Name: First Person Character
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -683,6 +683,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   armor: 50
   shield: 25
+  shieldRechargeRate: 1
+  shieldRechargeDelay: 10
   flatDamageReduction: 5
   damageDistributionRatio: 0.75
 --- !u!1 &8532630571333506380

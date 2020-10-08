@@ -25,7 +25,6 @@ namespace Mechanarchy.Stats
         private void Start()
         {
             maxHealth = health;
-            maxTempHealth = tempHealth;
         }
 
         private void Update()
@@ -125,6 +124,15 @@ namespace Mechanarchy.Stats
             isDead = true;
         }
 
+        private void CalculateMaxTempHealth()
+        {
+            maxTempHealth = maxHealth - health;
+            if (tempHealth > maxTempHealth)
+            {
+                tempHealth = maxTempHealth;
+            }
+        }
+
         public bool IsDead()
         {
             return isDead;
@@ -153,16 +161,18 @@ namespace Mechanarchy.Stats
             {
                 health = maxHealth;
             }
-
+            CalculateMaxTempHealth();
         }
 
         public void RecoverTempHealth(float healthRecover)
         {
             tempHealth += healthRecover;
-            if(tempHealth > maxTempHealth)
-            {
-                tempHealth = maxTempHealth;
-            }
+            CalculateMaxTempHealth();
+        }
+
+        public float GetHealthFraction()
+        {
+            return health / maxHealth;
         }
     }
 }
